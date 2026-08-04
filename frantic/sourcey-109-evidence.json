@@ -1,0 +1,56 @@
+{
+  "schema": "frantic.sourcey.delivery-evidence/v1",
+  "captured_at": "2026-08-04T03:26:42.839Z",
+  "claim": {
+    "bounty": 120,
+    "worker_price_usd": 1,
+    "operator": "solana-payout-receipts-agent"
+  },
+  "primary": {
+    "vendor": "DronaHQ",
+    "vendor_slug": "dronahq",
+    "pr_url": "https://github.com/sourcey/startup-credits/pull/109",
+    "pr_number": 109,
+    "head_sha": "50ba1f450420b5575f229d6c09f1ffafbbd775dc",
+    "raw_yaml": "https://raw.githubusercontent.com/sourcey/startup-credits/50ba1f450420b5575f229d6c09f1ffafbbd775dc/vendors/dr/dronahq.yaml",
+    "source_url": "https://www.dronahq.com/startup-program/"
+  },
+  "observations": [
+    {
+      "id": "pr_reachable",
+      "result": "pass",
+      "detail": "The public pull request resolves and exposes the DronaHQ startup-credit change."
+    },
+    {
+      "id": "head_pinned",
+      "result": "pass",
+      "detail": "The raw YAML URL is pinned to the exact PR head commit above and returned HTTP 200 during capture."
+    },
+    {
+      "id": "validation_check",
+      "result": "pass",
+      "detail": "GitHub check validate completed with conclusion success for the exact PR head."
+    },
+    {
+      "id": "first_party_source",
+      "result": "pass",
+      "detail": "The YAML cites the DronaHQ first-party startup-program URL as its source."
+    },
+    {
+      "id": "data_scope",
+      "result": "pass",
+      "detail": "The PR adds one vendor data YAML file and does not add executable code or secrets."
+    },
+    {
+      "id": "acceptance_gate",
+      "result": "pending",
+      "detail": "At capture the PR was open and unmerged. Frantic acceptance still requires Sourcey human review, merge, and the vendor appearing on the live Sourcey surface; recheck before redelivery."
+    }
+  ],
+  "reproduction": {
+    "raw_yaml_http_status": 200,
+    "github_check_name": "validate",
+    "github_check_conclusion": "success",
+    "requires_recheck_before_delivery": true
+  }
+}
